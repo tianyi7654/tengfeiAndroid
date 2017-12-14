@@ -1,4 +1,4 @@
-使用我的工具包方法
+锘夸娇鐢ㄦ垜鐨勫伐鍏峰寘鏂规硶
 
 1 allprojects {
 		repositories {
