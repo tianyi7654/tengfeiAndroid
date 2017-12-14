@@ -15,7 +15,13 @@ public class ToastUtils {
      * @param context
      * @param str
      */
-    public static void showToast(Context context, String str) {
-        Toast.makeText(context, str, Toast.LENGTH_LONG).show();
+    private static Toast toast;
+    public static void showToast(Context context,String text){
+        if(toast==null){
+            toast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
+        }else {
+            toast.setText(text);
+        }
+        toast.show();
     }
 }
