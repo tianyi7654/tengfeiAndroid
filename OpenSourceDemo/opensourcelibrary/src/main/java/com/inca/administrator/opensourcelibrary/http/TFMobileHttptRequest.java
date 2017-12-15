@@ -17,7 +17,6 @@ package com.inca.administrator.opensourcelibrary.http;
 import android.content.Context;
 
 import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
 
@@ -56,7 +55,7 @@ public class TFMobileHttptRequest {
 	* @return void    返回类型
 	* @throws
 	 */
-	public static void get(String url , RequestParams params , JsonHttpResponseHandler responseHandler) {
+	public static void get(String url , RequestParams params , TFNetCallBack responseHandler) {
 
 		if (params == null){
 			params = new RequestParams();
@@ -80,7 +79,7 @@ public class TFMobileHttptRequest {
 	* @return void    返回类型
 	* @throws
 	 */
-	public static void post(String url , RequestParams params,Context context, JsonHttpResponseHandler responseHandler){
+	public static void post(String url , RequestParams params,Context context, TFNetCallBack responseHandler){
 		AsyncHttpClient client = new AsyncHttpClient();
 		PersistentCookieStore myCookieStore = new PersistentCookieStore(context);
 		client.setCookieStore(myCookieStore);
